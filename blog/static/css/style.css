@@ -1,0 +1,1183 @@
+body {
+    overflow-x: hidden;
+}
+
+
+
+
+
+/* OUR GALLERY */
+.gallery-block {
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+.gallery-block .heading {}
+
+.gallery-block .heading h2 {
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.gallery-block.compact-gallery .item {
+    overflow: hidden;
+    margin-bottom: 0;
+    background: #eb625d;
+    opacity: 1;
+}
+
+.gallery-block.compact-gallery .item .image {
+    transition: 0.8s ease;
+}
+
+.gallery-block.compact-gallery .item .info {
+    position: relative;
+    display: inline-block;
+}
+
+.gallery-block.compact-gallery .item .description {
+    display: grid;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    padding: 10px;
+    font-size: 17px;
+    line-height: 18px;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    opacity: 1;
+    color: #fff;
+    transition: 0.8s ease;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.39));
+}
+
+.gallery-block.compact-gallery .item .description .description-heading {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.gallery-block.compact-gallery .item .description .description-body {
+    font-size: 0.8em;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+#bloghome .card{
+    -webkit-box-shadow: -1px 4px 15px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow:-1px 4px 15px -8px rgba(0,0,0,0.75);
+    box-shadow: -1px 4px 15px -8px rgba(0,0,0,0.75);
+}
+.clearfix {
+    clear:both;
+}
+
+.messages {
+    background-color: #c0c0c0;
+    color:#fff;
+    padding: 1em;
+}
+
+.success {
+    background-color: #008800;
+    border-color: #005500;
+    padding-left: 1em;
+}
+
+.alert-error {
+    background-color: rgba(255,0,0,0.5);
+}
+
+#bloghome .card:hover{
+    -webkit-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow:-1px 9px 40px -12px rgba(0,0,0,0.75);
+    box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+}
+
+#blogpage .card{
+    -webkit-box-shadow: -1px 4px 15px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow:-1px 4px 15px -8px rgba(0,0,0,0.75);
+    box-shadow: -1px 4px 15px -8px rgba(0,0,0,0.75);
+}
+
+
+#blogpage .card:hover{
+    -webkit-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow:-1px 9px 40px -12px rgba(0,0,0,0.75);
+    box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+}
+.navbar .nav-link {
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-left: 1em !important;
+    padding-right: 1em !important;
+}
+.my-navbar .navbar-nav li a:hover {
+    color: white !important;
+}
+
+/* .navbar .nav-item.active {
+    border-bottom: #fff 3px solid;
+} */
+
+.my-navbar {
+    /* transition: 750ms ease; */
+    background: rgba(0, 0, 0, 0.1) !important;
+}
+.fullblog-navbar{
+    background: rgba(0,0,0,0.9) !important;
+}
+
+.my-navbar.scrolled {
+    background: rgba(0,0,0,0.7) !important;
+}
+
+/* change navbar background to transparent */
+/* showcase; */
+.my-header {
+    width: 100%;
+    height: 650px;
+    background: url("../img/bgvivek.jpg");
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.my-header-dark-overlay {
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#imagegallery {
+    width: 100%;
+    height: 550px;
+    position: relative;
+    background: url("../img/bgvivek.jpg")!important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* dark overlay on image */
+.imagegallery-darkoverlay {
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+/*
+.my-header img {
+    width: 100%;
+    height: 650px;
+    position: absolute;
+    z-index: -22;
+    top: 0;
+} */
+
+
+/* explore head section */
+#explore-head-section {
+    width: 100%;
+    min-height: 250px;
+    position: relative;
+    background: url("../img/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 0px;
+    color: #fff;
+}
+.explore-head-section-dark-overlay{
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#home-aboutus {
+    min-height: 450px;
+    position: relative;
+    /* background: url("../img/banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; */
+    /* color: #fff; */
+}
+
+
+
+.home-aboutus-dark-overlay {
+    /* background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; */
+}
+
+
+#contact{
+    min-height: 600px;
+    /* position: relative;
+    background: url("../img/3-3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: -50px; */
+        background-color: #f8f9fa !important;
+    color: #000000;
+
+}
+
+.contactus-darkoverlay {
+    /* background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; */
+}
+.my-fullblog{
+    background: #ffffff;
+}
+.my-blog{
+    min-height: 650px;
+    position: relative;
+    background: url("../img/banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 0px;
+    color: #fff;
+}
+
+
+
+
+
+.blog-aboutus-dark-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#main-footer{
+    background: rgba(0,0,0,0.9);
+}
+
+/* image gallery */
+#imagegallery {
+    position: relative;
+    background: url("../img/ourteam.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* MEDIA QUIRIES */
+
+@media (min-width:200px) {
+    body {
+        overflow-x: hidden;
+    }
+
+
+    #connect h2{
+        font-size: 100px;
+    }
+    .social a{
+        font-size: 4.5rem;
+        padding: 3rem;
+    }
+
+    .fa-twitter{
+        color: #00aced !important;
+    }
+    .fa-google-plus-g{
+        color: #dd4b39;
+    }
+    .fa-quora{
+        color: #a62100;
+    }
+
+
+    .fa-youtube{
+        color: #bb0000;
+    }
+
+    .fa-twitter:hover,
+    .fa-youtube:hover,
+    .fa-quora:hover,
+    .fa-google-plus-g:hover{
+        color: #d5d5d5;
+
+    }
+
+
+    #imagegallery{
+       min-height: 550px;
+   }
+   #imagegallery h2 {
+       font-size: 14px;
+       color: #ffffff;
+       padding: 10px 15px;
+       border: solid 5px #0b79fa;
+   }
+   .gallery-block.compact-gallery .item .description {
+       opacity: 0;
+   }
+
+   .gallery-block.compact-gallery .item a:hover .description {
+       opacity: 1;
+   }
+
+   .gallery-block .zoom-on-hover:hover .image {
+       transform: scale(1.3);
+       opacity: 0.7;
+   }
+    /* showcase; */
+    .my-header {
+        width: 100%;
+        height: 250px;
+    }
+
+    /* about us */
+
+    .my-blog{
+        width: 100%;
+        min-height: 250px;
+        position: relative;
+        background: url("../img/banner.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        margin-top: 0px;
+        color: #fff;
+    }
+
+
+
+
+
+    .recentposts{
+        color: #0b79fa;
+        border-bottom: 1px solid #222222;
+    }
+    .recentposts h3{
+        font-size: 18px;
+        border-bottom: 2px solid #0b79fa;
+    }
+
+    .recentposts a{
+        font-size: 100px;
+    }
+
+    .recentposts p{
+        font-size: 10px;
+    }
+    .myposts h1{
+        color: #0b79fa;
+    }
+
+
+
+
+    /* .my-header img {
+        width: 100%;
+        height: 650px;
+        position: absolute;
+        z-index: -22;
+        top: 0;
+    } */
+
+    .my-navbar .navbar-nav li a {
+        color: white !important;
+    }
+
+    .homecentertext {
+        padding-top: 150px;
+    }
+
+    .homecentertext h1 {
+        font-size: 15px;
+    }
+
+    .homecentertext p {
+        font-size: 12px;
+    }
+    #blog-aboutus-section h1{
+        padding-top: 40px;
+        font-size: 15px;
+    }
+    #blog-aboutus-section p{
+        font-size: 12px;
+    }
+
+    #explore-head-section {
+        height: 200px;
+    }
+    #explore-head-section h1 {
+        font-size: 18px;
+    }
+
+    .aboutright img {
+        height: 250px;
+        width: 250px;
+    }
+
+
+    #explore-head-section p {
+        font-size: 12px;
+    }
+
+    #home-aboutus-section h1{
+        padding-top: 10px;
+        font-size: 18px;
+    }
+    #home-aboutus-section h3{
+        font-size: 12px;
+        padding-top: 10px;
+    }
+    #home-aboutus-section p{
+        font-size: 11px;
+
+    }
+
+    #home-aboutus img {
+        height: 100px;
+        width: 100px;
+        display: flex;
+        margin: 0 auto;
+        border-radius: 20px;
+    }
+    #bloghome h1 {
+        margin-top: 30px;
+        padding: 8px 15px;
+        border: solid 5px #0b79fa;
+        text-transform: uppercase;
+        font-size: 15px;
+    }
+
+
+    .myposts p{
+        font-size: 12px;
+        padding: 0px 0px;
+    }
+    #bloghome .recentposts a{
+        font-size: 14px;
+    }
+
+
+    #blog-aboutus-section h1{
+        padding-top: 50px;
+        font-size: 30px;
+    }
+    #blog-aboutus-section p{
+        font-size: 16px;
+    }
+
+
+
+    #contact h1{
+        font-size: 15px;
+    }
+    #contact h3{
+        font-size: 14px;
+    }
+    #contact p{
+        font-size: 12px;
+    }
+
+    #contact{
+        min-height: 300px;
+        padding-bottom: 30px;
+    }
+
+        #blogpage h1 {
+            margin-top: 50px;
+            padding: 8px 15px;
+            border: solid 5px #0b79fa;
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+
+
+        #blogpage .recentposts a{
+            font-size: 15px;
+        }
+
+        #contact h1{
+            font-size: 25px;
+        }
+        #contact p{
+            font-size: 16px;
+        }
+        .myposts img{
+            margin-top: 30px;
+            width: 60px;
+            height: 60px;
+
+        }
+        .myposts > .bheading a{
+            font-size: 14px !important;
+        }
+        .read>a {
+            font-size: 10px !important;
+            padding: 5px 15px !important;
+            margin-bottom: 5px;
+        }
+        .myposts p{
+            font-size: 12px !important;
+            color: #222222;
+        }
+
+}
+
+@media (min-width: 576px) {
+    body {
+        overflow-x: hidden;
+    }
+
+
+        #imagegallery {
+            min-height: 580px;
+        }
+
+        #imagegallery h2 {
+            font-size: 22px;
+            padding: 10px 15px;
+        }
+
+
+
+    /* showcase; */
+    .my-header {
+        width: 100%;
+        height: 480px;
+    }
+
+    .my-header h1{
+
+      }
+
+
+
+
+
+
+    /* .my-header img {
+        width: 100%;
+        height: 650px;
+        position: absolute;
+        z-index: -22;
+        top: 0;
+    } */
+
+    .my-navbar .navbar-nav li a {
+        color: white !important;
+    }
+
+    .homecentertext {
+        padding-top: 200px;
+    }
+
+    .homecentertext h1 {
+        font-size: 25px;
+    }
+
+    .homecentertext p {
+        font-size: 15px;
+    }
+
+
+    #explore-head-section {
+        height: 200px;
+    }
+    #explore-head-section h1 {
+        font-size: 25px;
+    }
+
+    #explore-head-section img {
+        height: 250px;
+        width: 250px;
+    }
+
+
+    #explore-head-section p {
+        font-size: 15px;
+    }
+
+    #home-aboutus-section h1{
+        padding-top: 50px;
+        font-size: 25px;
+    }
+    #home-aboutus-section h3{
+        font-size: 25px;
+        padding-top: 40px;
+    }
+    #home-aboutus-section p{
+        font-size: 12px;
+
+    }
+
+    #home-aboutus img {
+        height: 200px;
+        width: 200px;
+        display: flex;
+        margin: 0 auto;
+        border-radius: 20px;
+    }
+
+
+
+
+    #bloghome h1 {
+        margin-top: 60px;
+        padding: 8px 15px;
+        border: solid 5px #0b79fa;
+        text-transform: uppercase;
+        font-size: 15px;
+    }
+
+
+    #bloghome .recentposts a{
+        font-size: 12px;
+    }
+
+
+    #blog-aboutus-section h1{
+        padding-top: 70px;
+        font-size: 30px;
+    }
+    #blog-aboutus-section p{
+        font-size: 16px;
+    }
+
+
+        #contact h1{
+            font-size: 15px;
+        }
+        #contact h3{
+            font-size: 14px;
+        }
+        #contact p{
+            font-size: 12px;
+        }
+
+
+
+            #contact h1{
+                font-size: 25px;
+            }
+            #contact p{
+                font-size: 16px;
+            }
+            .myposts img{
+                margin-top: 40px;
+                width: 100px;
+                height: 100px;
+
+            }
+            .myposts > .bheading a{
+                font-size: 14px !important;
+            }
+            .read>a {
+                font-size: 10px !important;
+                padding: 5px 15px !important;
+                margin-bottom: 5px;
+            }
+            .myposts p{
+                font-size: 12px !important;
+                color: #222222;
+            }
+
+}
+
+@media (min-width:768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+
+    #imagegallery {
+        min-height: 700px;
+    }
+
+    #imagegallery h2 {
+        font-size: 22px;
+        padding: 10px 15px;
+    }
+
+    /* showcase; */
+    .my-header {
+        width: 100%;
+        height: 480px;
+    }
+
+    .my-header h1{
+
+      }
+
+
+
+
+    /* .my-header img {
+        width: 100%;
+        height: 650px;
+        position: absolute;
+        z-index: -22;
+        top: 0;
+    } */
+
+    .my-navbar .navbar-nav li a {
+        color: white !important;
+    }
+
+    .homecentertext {
+    }
+
+    .homecentertext h1 {
+        font-size: 25px;
+    }
+
+    .homecentertext p {
+        font-size: 15px;
+    }
+
+
+    #explore-head-section {
+        height: 200px;
+    }
+    #explore-head-section h1 {
+        font-size: 25px;
+    }
+
+    #explore-head-section p {
+        font-size: 15px;
+    }
+
+    #home-aboutus-section h1{
+        padding-top: 50px;
+        font-size: 25px;
+    }
+    #home-aboutus-section h3{
+        font-size: 25px;
+        padding-top: 5px;
+    }
+    #home-aboutus-section p{
+        font-size: 12px;
+}
+
+    #home-aboutus img {
+        padding-top: 20px;
+        height: 250px;
+        width: 200px;
+
+        border-radius: 20px;
+    }
+
+
+    #bloghome h1 {
+        margin-top: 60px;
+        padding: 8px 15px;
+        border: solid 5px #0b79fa;
+        text-transform: uppercase;
+        font-size: 15px;
+    }
+
+
+    #bloghome .recentposts a{
+        font-size: 12px;
+    }
+
+
+    #blog-aboutus-section h1{
+        padding-top: 70px;
+        font-size: 30px;
+    }
+    #blog-aboutus-section p{
+        font-size: 16px;
+    }
+
+
+        #contact h1{
+            font-size: 25px;
+        }
+        #contact p{
+            font-size: 16px;
+        }
+
+            #blogpage h1 {
+                margin-top: 50px;
+                padding: 8px 15px;
+                border: solid 5px #0b79fa;
+                text-transform: uppercase;
+                font-size: 20px;
+            }
+
+
+            #blogpage .recentposts a{
+                font-size: 15px;
+            }
+
+            #contact h1{
+                font-size: 25px;
+            }
+            #contact p{
+                font-size: 16px;
+            }
+            .myposts img{
+                margin-top: 50px;
+                width: 100px;
+                height: 100px;
+            }
+            .myposts > .bheading a{
+                font-size: 20px !important;
+            }
+            .read>a {
+                font-size: 15px !important;
+                padding: 8px 25px !important;
+                margin-bottom: 5px;
+            }
+            .myposts p{
+                font-size: 16px !important;
+            }
+
+}
+
+@media (min-width:992px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    #imagegallery {
+    height: 900px;
+}
+
+#imagegallery h2 {
+    font-size: 22px;
+    padding: 10px 15px;
+}
+
+    /* showcase; */
+    .my-header {
+        width: 100%;
+        height: 580px;
+    }
+
+    .my-header h1{
+
+      }
+
+    /* .my-header img {
+        width: 100%;
+        height: 650px;
+        position: absolute;
+        z-index: -22;
+        top: 0;
+    } */
+
+    .my-navbar .navbar-nav li a {
+        color: white !important;
+    }
+
+    .homecentertext {
+    }
+
+    .homecentertext h1 {
+        font-size: 30px;
+    }
+
+    .homecentertext p {
+        font-size: 20px;
+    }
+
+
+    #explore-head-section {
+        height: 200px;
+    }
+    #explore-head-section h1 {
+        font-size: 30px;
+    }
+
+    #explore-head-section p {
+        font-size: 150px;
+    }
+
+    #home-aboutus-section h1{
+        padding-top: 50px;
+        font-size: 25px;
+    }
+
+    #home-aboutus-section p{
+        font-size: 15px;
+
+    }
+    #home-aboutus-section h3{
+        font-size: 25px;
+        padding-top: 40px;
+    }
+
+    #home-aboutus img {
+        margin-top: -0px;
+        height: 350px;
+        width: 300px;
+
+        border-radius: 20px;
+    }
+
+    #bloghome h1 {
+        margin-top: 60px;
+        padding: 8px 15px;
+        border: solid 5px #0b79fa;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+    #bloghome .recentposts a{
+        font-size: 15px;
+    }
+
+
+    #blog-aboutus-section h1{
+        padding-top: 150px;
+        font-size: 45px;
+    }
+    #blog-aboutus-section p{
+        font-size: 16px;
+    }
+
+
+
+        #contact h1{
+            font-size: 25px;
+        }
+        #contact p{
+            font-size: 16px;
+        }
+
+
+            #blogpage h1 {
+                margin-top: 50px;
+                padding: 8px 15px;
+                border: solid 5px #0b79fa;
+                text-transform: uppercase;
+                font-size: 20px;
+            }
+
+
+            #blogpage .recentposts a{
+                font-size: 15px;
+            }
+
+            #contact h1{
+                font-size: 25px;
+            }
+            #contact p{
+                font-size: 16px;
+            }
+            .myposts img{
+                width: 150px;
+                height: 150px;
+            }
+            .myposts > .bheading a{
+                font-size: 20px !important;
+            }
+            .read>a {
+                font-size: 15px !important;
+                padding: 8px 25px !important;
+                margin-bottom: 5px;
+            }
+            .myposts p{
+                font-size: 16px !important;
+            }
+
+}
+
+@media (min-width:1200px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    /* showcase; */
+    .my-header {
+        width: 100%;
+        height: 630px;
+    }
+
+    .my-header h1{
+
+      }
+
+    .my-header img {
+        width: 100%;
+        height: 650px;
+        position: absolute;
+        z-index: -22;
+        top: 0;
+    }
+
+    .my-navbar .navbar-nav li a {
+        color: white !important;
+    }
+
+    .homecentertext {
+    }
+
+    .homecentertext h1 {
+        font-size: 35px;
+    }
+
+    .homecentertext p {
+        font-size: 25px;
+    }
+
+
+
+    #explore-head-section h1 {
+        font-size: 35px;
+    }
+
+    #explore-head-section p {
+        font-size: 25px;
+    }
+
+    #home-aboutus-section h1{
+        padding-top: 50px;
+        font-size: 25px;
+    }
+    #home-aboutus-section h3{
+        font-size: 25px;
+        padding-top: 30px;
+    }
+    #home-aboutus-section p{
+        font-size: 16px;
+    }
+
+    #home-aboutus img {
+        margin-top: -0px;
+        height: 330px;
+        width: 250px;
+
+        border-radius: 20px;
+    }
+
+
+    .home {
+        height: 450px;;
+        display: flex;
+       justify-content: center;
+       align-items: center;
+
+    }
+
+    #bloghome h1 {
+        margin-top: 60px;
+        padding: 8px 15px;
+        border: solid 5px #0b79fa;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+    #blog-aboutus-section h1{
+        padding-top: 150px;
+        font-size: 45px;
+    }
+    #blog-aboutus-section p{
+        font-size: 16px;
+    }
+
+    #bloghome .recentposts a{
+        font-size: 14px;
+    }
+
+
+
+    /* #blog-aboutus-section h1{
+        padding-top: 2505px;
+    }
+    #blog-aboutus-section p{
+        font-size: 16px;
+        text-align: center;
+    } */
+
+    #blogpage h1 {
+        margin-top: 50px;
+        padding: 8px 15px;
+        border: solid 5px #0b79fa;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+
+    #blogpage .recentposts a{
+        font-size: 15px;
+    }
+
+    #contact h1{
+        font-size: 25px;
+    }
+    #contact p{
+        font-size: 16px;
+    }
+    .myposts img{
+        width: 150px;
+        height: 150px;
+}
+
+        .my-blog{
+            min-height: 450px;
+            position: relative;
+            background: url("../img/banner.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            margin-top: 0px;
+            color: #fff;
+        }
+
+        .myposts img {
+            margin-top: 0px;
+            height: 150px;
+            width: 150px;
+        }
+    .myposts > .bheading a{
+        font-size: 15px !important;
+    }
+    .read>a {
+        font-size: 14px !important;
+        padding: 6px 18px !important;
+        margin-bottom: 5px;
+    }
+    .myposts p{
+        font-size: 14px !important;
+    }
+
+
+    #imagegallery {
+        min-height: 1000px;
+    }
+
+    #imagegallery h2 {
+        font-size: 25px;
+        padding: 10px 15px;
+    }
+
+}

@@ -1,0 +1,45 @@
+{% extends 'blog/base.html' %}
+
+{% block navbg %}my-nabar{% endblock %}
+
+{% block homenav %} {% url 'home' %} {% endblock %}
+{% block aboutnav %} {% url 'about' %} {% endblock %}
+{% block blognav %} {% url 'post_list' %} {% endblock %}
+{% block gallerynav %} {% url 'home' %} {% endblock %}
+
+{% block content %}
+<div class="container mb-5">
+<div class="row" style="margin-top:200px;">
+    <h1>Get in touch in me</h1>
+
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+
+    <form action="{% url 'contact' %}" method="post" class="form-group">
+        {% csrf_token %}
+        {% for field in form %}
+            <div class="submit-link-row">{{ field.label_tag}}<br>{{field}}</div>
+            {% if form.errors %}
+                {% for error in field.errors %}
+                <p class="error-message">
+                    <strong>{{ error|escape }}</strong>
+                </p>
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+        <br>
+        <br>
+        <button id="submit" name="submit" class="btn btn-primary" value="1">Submit</button>
+        <a href="{% url 'clear' %}" id="clear" name="clear" class="btn btn-default">Clear</a>
+    </form>
+
+    </div>
+<div class="col-lg-2"></div>
+</div>
+</div>
+{% endblock %}

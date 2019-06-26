@@ -1,0 +1,354 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block bg_class %} my-header {% endblock %}
+{% block bgdark_class %} my-header-dark-overlay{% endblock %}
+{% block navbg %}my-navbar{% endblock %}
+{% block homenav %}#showcase{% endblock %}
+{% block aboutnav %}#home-aboutus-section{% endblock %}
+{% block blognav %}#bloghome{% endblock %}
+{% block gallerynav %}#imagegallery{% endblock %}
+
+
+
+
+{% block scrolleffect %}
+<script>
+    $(window).scroll(function() {
+        $('nav').toggleClass('scrolled', $(this).scrollTop() > 500);
+    });
+</script>
+{%endblock%}
+
+
+
+{% block content %}
+<div class="container home">
+    <div class="row">
+        <div class="col-12">
+            <div class="container homecentertext text-center text-white">
+                <h1 class="sree"><span class="author"></span></h1>
+                <p class="lead tagline">Professor | BookWorm | Researcher</p>
+
+
+
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</div>
+
+
+</div>
+</div>
+</section>
+
+<!-- LOGIN MODAL -->
+
+<!-- Modal -->
+<div class="modal fade" id="loginmodel" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Login</h5>
+                <button class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="" class="form-group">
+                    <label for="username">UserName</label>
+                    <input type="text" class="form-control" placeholder="enter your user name" name="" value="">
+
+                    <label for="username">Passowrd</label>
+                    <input type="text" class="form-control" placeholder="password" name="" value="">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">Register</button>
+                <button type="button" class="btn btn-primary">Login here</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<!-- about me -->
+<!-- about us -->
+<section id="home-aboutus-section" class="py-3">
+    <div id="home-aboutus">
+        <div class="home-aboutus-dark-overlay">
+            <div class="container">
+                <h1 class="font-weight-bold ">About Me</h1>
+
+                <div class="row">
+                {% for aboutme in mybio|slice:":1"  %}
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-12 aboutright">
+                        {% if aboutme.aimage %}
+                        <img class="img-responsive" src="{{ aboutme.aimage.url }}">
+                        {% else %}
+                        {% endif %}
+                    </div>
+
+                    <div class="col-lg-8 col-md-8 col-sm-12 col-12 aboutleft">
+
+                        <h3 class="">{{aboutme.atitle}}</h3>
+                        <p class="lead">{{aboutme.atext|safe}}</p>
+
+
+
+
+
+                    </div>
+                    {% endfor %}
+
+                    <a href="{% url 'about' %}" class="btn btn-success btn-block">Know More..</a>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+</section>
+
+
+
+<!-- EXPLORE Head -->
+
+<section id="explore-head-section" class="bg-primary">
+    <div class="explore-head-section-dark-overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <div class="py-5">
+                        <h3 class=""> <span class="mywords"></span></h3>
+
+                        {% for qoday in myquote|slice:":1"  %}
+                        <p class="lead">{{qoday.qtext|safe}}</p>
+                        <p><span class="lead d-inline">{{qoday.qauthor|safe}}</span> <span class=" d-inline blockquote-footer">[{{qoday.qdate|safe}}]</span></p>
+
+
+
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<!-- blog -->
+<section id="bloghome">
+    <div class="container">
+
+        <h1 class="text-center d-inline-block">Posts</h1>
+
+        <div class="row">
+
+            <div class="col-lg-3 col-md-3 col-sm-12 col-12 text-center">
+                <div class="card recentposts shadow p-1 mb-3 bg-white rounded">
+                    <h3 class="text-center">Recent Posts</h3>
+                    {% for post in recentposts|slice:":5" %}
+
+                    <div class="p-3 recentposts">
+                        <h2 class="text-capitalize"><a class="text-capitalize" href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                        <p class="mb-1 text-muted">Published: {{ post.published_date }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="col-lg-9 col-md-9 col-sm-12 col-12">
+
+                {% for post in twoposts|slice:":2"  %}
+
+                <div class="card mb-3 myposts p-1 bg-white rounded">
+                    <h2 class="card-header bheading"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                    <div class="card-body">
+                        <div class="row">
+
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-3">
+                                {% if post.image %}
+                                <img class="img-responsive" src="{{ post.image.url }}">
+                                {% else %}
+                                {% endif %}
+                            </div>
+
+                            <div class="col-lg-9 col-md-9 col-sm-9 col-9 read">
+                                <p class="card-text">{{ post.text|safe|truncatewords:25|linebreaks }}</p>
+                                <a class="btn btn-outline-primary" href="{% url 'post_detail' pk=post.pk %}" class="text-primary">Read More..</a>
+                                <p class="mb-1 text-muted">Published: {{ post.published_date }}</p>
+                                <p class="text-lead">Author : {{ post.author }}</p>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+
+
+            <a href="{% url 'post_list' %}" class="btn mb-5 btn-success shadow btn-block">View More <i class="fa fa-arrow-circle-down"></i> </a>
+
+
+
+        </div>
+    </div>
+    </div>
+
+</section>
+
+<!-- IMAGE GALLERY -->
+<section id="imagegallery">
+    <div class="imagegallery-darkoverlay">
+        <div class="gallery-block compact-gallery">
+            <div class="container">
+                <div class="heading text-center pb-5">
+                    <h2 class="d-inline">My Gallery</h2>
+                </div>
+
+                <div class="row no-gutters">
+                    <div class="galfirstrow col-lg-3 col-md-3 col-sm-3 col-4 item zoom-on-hover">
+                        <a href="{% static 'img/gallery/pic11.jpg' %}" class="lightbox">
+                            <img class="img-fluid image" src="{% static 'img/gallery/pic11.jpg'  %}" alt="">
+
+                            <span class="description">
+                                <span class="discription-heading">VIVEK</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="galfirstrow col-lg-3 col-md-3 col-sm-3 col-4 item zoom-on-hover">
+                        <a href="{% static 'img/bgvivek.jpg' %}" class="lightbox">
+                            <img class="img-fluid image" src="{% static 'img/bgvivek.jpg' %}" alt="">
+
+                            <span class="description">
+                                <span class="discription-heading">VIVEK</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="galfirstrow col-lg-3 col-md-3 col-sm-3 col-4 item zoom-on-hover">
+                        <a href="{% static 'img/gallery/pic3.jpg' %}" class="lightbox">
+                            <img class="img-fluid image" src="{% static 'img/gallery/pic3.jpg' %}" alt="">
+
+                            <span class="description">
+                                <span class="discription-heading">VIVEK</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="galfirstrow col-lg-3 col-md-3 col-sm-3 col-4 item zoom-on-hover">
+                        <a href="{% static 'img/gallery/pic4.jpg' %}" class="lightbox">
+                            <img class="img-fluid image" src="{% static 'img/gallery/pic4.jpg' %}" alt="">
+
+                            <span class="description">
+                                <span class="discription-heading">VIVEK</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="galsecondrow col-lg-3 col-md-3 col-sm-3 col-4 item zoom-on-hover">
+                        <a href="{% static 'img/gallery/pic12.jpg' %}" class="lightbox">
+                            <img class="img-fluid image" src="{% static 'img/gallery/pic12.jpg' %}" alt="">
+
+                            <span class="description">
+                                <span class="discription-heading">VIVEK</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="galsecondrow col-lg-3 col-md-3 col-sm-3 col-4 item zoom-on-hover">
+                        <a href="{% static 'img/gallery/pic6.jpg' %}" class="lightbox">
+                            <img class="img-fluid image" src="{% static 'img/gallery/pic6.jpg' %}" alt="">
+
+                            <span class="description">
+                                <span class="discription-heading">VIVEK</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="galsecondrow col-lg-3 col-md-3 col-sm-3 col-4 item zoom-on-hover">
+                        <a href="{% static 'img/gallery/pic10.jpg' %}" class="lightbox">
+                            <img class="img-fluid image" src="{% static 'img/gallery/pic10.jpg' %}" alt="">
+
+                            <span class="description">
+                                <span class="discription-heading">VIVEK</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="galsecondrow col-lg-3 col-md-3 col-sm-3 col-4 item zoom-on-hover">
+                        <a href="{% static 'img/gallery/pic11.jpg' %}" class="lightbox">
+                            <img class="img-fluid image" src="{% static 'img/gallery/pic11.jpg' %}" alt="">
+
+                            <span class="description">
+                                <span class="discription-heading">VIVEK</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="galthirdrow col-lg-3 col-md-3 col-sm-3 col-4 item zoom-on-hover">
+                        <a href="{% static 'img/gallery/pic6.jpg' %}" class="lightbox">
+                            <img class="img-fluid image" src="{% static 'img/gallery/pic6.jpg' %}" alt="">
+
+                            <span class="description">
+                                <span class="discription-heading">VIVEK</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="galthirdrow  col-lg-3 col-md-3 col-sm-3 col-4 item zoom-on-hover">
+                        <a href="{% static 'img/gallery/pic10.jpg' %}" class="lightbox">
+                            <img class="img-fluid image" src="{% static 'img/gallery/pic10.jpg' %}" alt="">
+
+                            <span class="description">
+                                <span class="discription-heading">VIVEK</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="galthirdrow col-lg-3 col-md-3 col-sm-3 col-4 item zoom-on-hover">
+                        <a href="{% static 'img/gallery/pic11.jpg' %}" class="lightbox">
+                            <img class="img-fluid image" src="{% static 'img/gallery/pic11.jpg' %}" alt="">
+
+                            <span class="description">
+                                <span class="discription-heading">VIVEK</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="galthirdrow col-lg-3 col-md-3 col-sm-3 col-4 item zoom-on-hover">
+                        <a href="{% static 'img/gallery/pic12.jpg' %}" class="lightbox">
+                            <img class="img-fluid image" src="{% static 'img/gallery/pic12.jpg' %}" alt="">
+
+                            <span class="description">
+                                <span class="discription-heading">VIVEK</span>
+                            </span>
+                        </a>
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
