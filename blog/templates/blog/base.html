@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.css">
     <link rel="stylesheet" href="{% static "css/style.css" %}">
-    <title>Vivek V</title>
+    <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
     <!-- SHOWCASE IMAGE AND NAVBAR INSIDE MY-HEADER -->
@@ -58,20 +58,36 @@
         <footer id="main-footer" class="py-5 text-white">
 
             <div class="container">
-                <div class="row text-center text-white">
+                <div class="row text-white">
 
-                    <div class="col-md-6">
-                        <p class="lead">Copyrights &copy; 2019 Vivekanand Vemakoti</p>
+                    <div class="col-md-4 col-sm-6 col-12">
+
                         <p>Thank you for visiting My Blog</p>
-                        <p>From : Vivekanand Vemakoti</p>
+                        <p>From : Vivekanand</p>
+                        <a href="#" style="font-size: 25px;"><i class="fa fa-facebook"></i></a>
+                            <a href="#" style="font-size: 25px;"><i class="fa fa-twitter"></i></a>
+                            <a href="#" style="font-size: 25px;"><i class="fa fa-instagram"></i></a>
+                            <a href="#" style="font-size: 25px;"><i class="fa fa-quora"></i></a>
+                            <a href="#" style="font-size: 25px;"><i class="fa fa-youtube"></i></a>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-4 col-sm-6 col-12" >
+                        <h4>About Vivekanand</h4>
+                           I am Vivekanand. This is my personal blog
+                           where I share my experiences like the books I read, 
+                           the work I do and so on...
+
+
+                            
+                        </div> 
+
+                    <div class="col-md-4 col-sm-6 col-12">
                         <p>Webiste Made By Lincolnstep.com</p>
                         <p>Our Services: Personal Blogs</p>
                         <a class="" href="htttps:lincolnstep.com"> CLICK TO VISIT OUR BLOG</a>
                         <p>Contact: lincolnstepteam@gmail.com</p>
                     </div>
+                  
                 </div>
             </div>
 
